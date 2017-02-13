@@ -10,6 +10,7 @@ alias gpush="git push origin master"
 alias c="clear"
 alias reload!='. ~/.zshrc'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # Homestead
 function homestead() {
