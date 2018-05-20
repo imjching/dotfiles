@@ -1,21 +1,13 @@
 # Aliases
-alias mongod="mongod --config /usr/local/etc/mongod.conf"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+# alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias web="docker-compose run --rm web"
 alias gw="gcc -Wall"
 alias workspace="cd ~/workspace"
-alias whs="cd ~/workspace-hs"
-alias rstudio="open -a RStudio ."
 alias gpush="git push origin master"
 alias c="clear"
 alias reload!='. ~/.zshrc'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-
-# Homestead
-function homestead() {
-    ( cd ~/Homestead && vagrant $* )
-}
 
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
@@ -87,30 +79,10 @@ function gz() {
 export DOTFILES=$(pwd)
 export PATH=$PATH:$DOTFILES/bin
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:$JAVA_HOME/bin
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-
-# added by Anaconda3 4.0.0 installer
-export PATH="/Users/imjching/anaconda/bin:$PATH"
+# golang settings
+export GOROOT=$HOME/.go/1.10.2
+export GOPATH=$HOME/workspace
+export PATH=$PATH:$GOROOT/bin
 
 # to fix executables in sbin
 export PATH="/usr/local/sbin:$PATH"
-
-# Composer executables
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
-# for RStudio
-export RSTUDIO_WHICH_R="$HOME/anaconda/bin/r"
-
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/imjching/Downloads/HTN1527-0dabfdd0bab3.json"
-
-# berkeley CS 61B
-source "$HOME/workspace/cs61b/adm/login"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # L
