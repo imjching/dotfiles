@@ -5,9 +5,10 @@ alias gw="gcc -Wall"
 alias workspace="cd ~/workspace"
 alias gpush="git push origin master"
 alias c="clear"
-alias reload!='. ~/.zshrc'
+alias reload!=". ~/.zshrc"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias a="cd ~/workspace/src/github.com/imjching"
 
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
@@ -79,10 +80,21 @@ function gz() {
 export DOTFILES=$(pwd)
 export PATH=$PATH:$DOTFILES/bin
 
+# to fix executables in sbin
+export PATH="/usr/local/sbin:$PATH"
+
 # golang settings
 export GOROOT=$HOME/.go/1.10.2
 export GOPATH=$HOME/workspace
-export PATH=$PATH:$GOROOT/bin
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-# to fix executables in sbin
-export PATH="/usr/local/sbin:$PATH"
+# pyenv settings
+# eval "$(pyenv init -)"
+export PATH=${HOME}/.pyenv/shims:${PATH}
+export PYENV_SHELL=zsh
+# command pyenv rehash 2>/dev/null
+
+# chruby and ruby-install settings
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby 2.5.1
