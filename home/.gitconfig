@@ -1,0 +1,12 @@
+[user]
+  signingkey = 99D839C9A8C8D38F
+  name = Jay
+  email = 6175557+imjching@users.noreply.github.com
+[core]
+  autocrlf = input
+  excludesfile = /Users/imjching/.gitignore_global
+  pager = less -R
+[alias]
+  who = shortlog -s -n --no-merges
+  standup = shortlog --since=yesterday
+  today = shortlog --since=midnight
