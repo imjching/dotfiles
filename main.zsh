@@ -77,7 +77,7 @@ function gz() {
 }
 
 # Paths to export
-export DOTFILES=$(pwd)
+export DOTFILES=~/workspace/src/github.com/imjching/dotfiles
 export PATH=$PATH:$DOTFILES/bin
 
 # to fix executables in sbin
