@@ -1,7 +1,21 @@
-# Setup
+## dotfiles
 
-1. Run `setup.sh`
+### Setup
 
-2. `echo "source ~/dotfiles/main.zsh" >> ~/.zshrc`
+- **Terminal**: iTerm 2
+- **Shell**: zsh
+- **Editor**: vim / Sublime Text
+- **Version control**: git / hg
+- **Multiplexer**: tmux
 
-3. Install necessary packages such as man2html
+### Usage
+
+- Use `linker.sh` to symlink necessary files. It will prompt to override if the files already exist.
+- Run `setup.sh` to set executable flags for bin files.
+- `echo "source ~/dotfiles/main.zsh" >> ~/.zshrc`
+
+### Screenshots
+
+iTerm 2 with `tmux`
+
+![./tmux.png](./tmux.png)
